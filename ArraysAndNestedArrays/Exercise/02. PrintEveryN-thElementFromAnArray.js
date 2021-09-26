@@ -1,14 +1,20 @@
+// function printEveryNthElement(array, step){
+//     let result = [];
+//     result.unshift(array[0]);
+
+//     for (let index = 1; index < array.length; index++) {
+//         if (index % step == 0) {
+//             result.push(array[index]);
+//         }
+//     }
+
+//     return result;
+// }
+
 function printEveryNthElement(array, step){
-    let result = [];
-    result.unshift(array[0]);
-
-    for (let index = 1; index < array.length; index++) {
-        if (index % step == 0) {
-            result.push(array[index]);
-        }
-    }
-
-    return result;
+    let filteredArray = array.filter((element, index) => index % step === 0);
+    
+    return filteredArray;
 }
 
 console.log(printEveryNthElement(['5', 
